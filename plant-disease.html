@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Disease Detection</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Top Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl font-bold text-green-600">AgriSense</span>
+      </div>
+      <div class="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <a href="#" class="hover:text-green-600">Home</a>
+        <a href="#" class="hover:text-green-600">Crop Recommendation</a>
+        <a href="#" class="text-green-600 border-b-2 border-green-600">Disease Detection</a>
+        <a href="#" class="hover:text-green-600">Market Trends</a>
+        <a href="#" class="hover:text-green-600">About</a>
+      </div>
+      <div>
+        <button class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Profile</button>
+      </div>
+    </div>
+  </nav>  <!-- Main Content -->  <main class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <!-- Left Column -->
+    <section class="bg-white shadow rounded-2xl p-6 flex flex-col space-y-6">
+      <h2 class="text-xl font-semibold text-gray-800">Upload Plant Image</h2>
+      <div class="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-xl p-8 bg-gray-50 hover:bg-gray-100 cursor-pointer">
+        <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4a1 1 0 011-1h8a1 1 0 011 1v12m-9 4h10m-5-4v4"/>
+        </svg>
+        <p class="text-gray-500 mt-3">Drag & Drop or <span class="text-green-600 font-semibold cursor-pointer">Browse</span></p>
+      </div>
+      <div>
+        <label for="crop" class="block mb-2 text-gray-700 font-medium">Select Crop</label>
+        <select id="crop" class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <option>Tomato</option>
+          <option>Wheat</option>
+          <option>Rice</option>
+          <option>Maize</option>
+          <option>Potato</option>
+        </select>
+      </div>
+      <button class="w-full py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition">Detect Disease</button>
+      <div class="mt-6">
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Description</h3>
+        <div class="p-4 border rounded-xl bg-gray-50 text-gray-700 h-40 overflow-y-auto">
+          <p class="text-sm">After detection, details about the disease, symptoms, causes, treatment, and prevention tips will appear here.</p>
+        </div>
+      </div>
+    </section><!-- Right Column -->
+<section class="bg-white shadow rounded-2xl p-6 flex flex-col space-y-6">
+  <h2 class="text-xl font-semibold text-gray-800">Detection Results</h2>
+  <div class="flex items-center justify-center bg-gray-100 rounded-xl h-64">
+    <span class="text-gray-400">Image Preview</span>
+  </div>
+  <div class="space-y-4">
+    <div>
+      <h3 class="font-semibold text-gray-700">Predicted Disease</h3>
+      <p class="text-green-600 font-bold text-lg">—</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Confidence Score</h3>
+      <p class="text-gray-600">— %</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-gray-700">Recommended Actions</h3>
+      <ul class="list-disc ml-6 text-gray-600 space-y-1">
+        <li>—</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </main>  <!-- Previous Searches -->  <section class="max-w-7xl mx-auto px-6 pb-10">
+<h2 class="text-xl font-semibold text-gray-800 mb-4">Previous Searches</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <!-- Example card -->
+      <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center space-y-2 hover:shadow-lg transition">
+        <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
+          <span class="text-gray-400 text-sm">Img</span>
+        </div>
+        <p class="text-sm font-medium text-gray-700">Tomato Leaf Blight</p>
+        <p class="text-xs text-gray-500">Aug 30, 2025</p>
+      </div>
+      <div class="bg-white shadow rounded-xl p-4 flex flex-col items-center space-y-2 hover:shadow-lg transition">
+        <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
+          <span class="text-gray-400 text-sm">Img</span>
+        </div>
+        <p class="text-sm font-medium text-gray-700">Rice Brown Spot</p>
+        <p class="text-xs text-gray-500">Aug 25, 2025</p>
+      </div>
+      <!-- Add more history cards dynamically -->
+    </div>
+  </section>
+</body>
+</html>
