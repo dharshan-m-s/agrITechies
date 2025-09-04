@@ -1,0 +1,335 @@
+
+body {
+    background-color: #f9fafb;
+    /* Equivalent to bg-gray-50 */
+}
+
+/* Navbar */
+.nav-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #16a34a;
+    /* Equivalent to text-green-600 */
+}
+
+.nav-links {
+    display: none;
+    gap: 1.5rem;
+    color: #374151;
+    /* Equivalent to text-gray-700 */
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+}
+.hover-green{
+    color:black;
+    text-decoration: none;
+}
+.hover-green:hover {
+    color: #16a34a;
+    text-decoration: none;
+    /* Equivalent to text-green-600 */
+    transition-duration:1s;
+    transition-behavior: ease-in;
+}
+
+.active-tab {
+    color: #16a34a;
+    text-decoration: none;
+    /* Equivalent to text-green-600 */
+    border-bottom: 2px solid #16a34a;
+}
+
+.profile-btn {
+    padding: 0.5rem 1rem;
+    background: #16a34a;
+    /* Equivalent to bg-green-600 */
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.profile-btn:hover {
+    background: #15803d;
+    /* Equivalent to hover:bg-green-700 */
+}
+
+/* Main Content */
+.main-grid {
+    max-width: 80rem;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem 2.5rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+    .main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card:hover{
+   box-shadow: 0 10px 10px -1px rgba(0, 0, 0, 0.1), 0 7px 9px -2px rgba(0, 0, 0, 0.1);
+
+    transition: box-shadow 0.2s;
+}
+
+/* Upload Section */
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #d1d5db;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+.upload-box:hover {
+    background: #f3f4f6;
+}
+
+.upload-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #9ca3af;
+    /* Equivalent to text-gray-400 */
+}
+
+.upload-text {
+    margin-top: 0.75rem;
+    color: #6b7280;
+    /* Equivalent to text-gray-500 */
+}
+
+.browse-text {
+    color: #16a34a;
+    /* Equivalent to text-green-600 */
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Form Elements */
+.form-group {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    /* Equivalent to text-gray-700 */
+    font-weight: 500;
+}
+
+.select-input {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+}
+
+.select-input:focus {
+    border-color: #84cc16;
+    box-shadow: 0 0 0 2px #84cc16;
+    transition: ease-in-out 1s;
+    
+}
+
+.select-input option{
+    color:black;
+}
+.select-input option:hover{
+    background-color: #16a34a;
+    color:white;
+}
+
+
+
+/* Buttons */
+.detect-btn {
+    width: 100%;
+    padding: 0.75rem 0;
+    background: #16a34a;
+    /* bg-green-600 */
+    color: white;
+    border-radius: 0.75rem;
+    font-weight: 600;
+}
+
+.detect-btn:hover {
+    background: #15803d;
+    /* hover:bg-green-700 */
+    transition: ease 0.2s;
+}
+
+/* Description Box */
+.description-box {
+    margin-top: 1.5rem;
+}
+
+.description-box h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.description-content {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #f9fafb;
+    color: #374151;
+    height: 10rem;
+    overflow-y: auto;
+    font-size: 0.875rem;
+}
+
+/* Right Column - Results */
+.preview-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4f6;
+    border-radius: 0.75rem;
+    height: 16rem;
+    margin-bottom: 1.5rem;
+}
+
+.preview-box span {
+    color: #9ca3af;
+}
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.result-section h3 {
+    font-weight: 600;
+    color: #374151;
+}
+
+.result-value {
+    color: #16a34a;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.recommended-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: #4b5563;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Previous Searches Section */
+.history-section {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem 2.5rem;
+}
+
+.history-section h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .history-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .history-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.history-card {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: box-shadow 0.2s;
+}
+
+.history-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.history-img {
+    width: 5rem;
+    height: 5rem;
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-img span {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.history-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.history-date {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
