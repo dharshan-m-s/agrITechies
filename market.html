@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Trends - AgriSense</title>
+  <link rel="stylesheet" href="agri.css">
+  <link rel="stylesheet" href="market.css">
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">AgriSense</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="hover-green">Home</a>
+        <a href="crop.html" class="hover-green">Crop Recommendation</a>
+        <a href="plant-disease.html" class="hover-green">Disease Detection</a>
+        <a href="market.html" class="active-tab">Market Trends</a>
+        <a href="about.html" class="hover-green">About</a>
+      </div>
+      <div>
+        <button class="profile-btn">Profile</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="header-container">
+      <h1 class="page-title">Agricultural Market Intelligence</h1>
+      <p class="page-subtitle">Real-time price data, market analysis, and profit insights to maximize your farming returns</p>
+    </div>
+  </section>
+
+  <!-- Market Overview Dashboard -->
+  <section class="market-dashboard">
+    <div class="dashboard-container">
+      <div class="dashboard-cards">
+        <div class="dashboard-card trending-up">
+          <div class="card-icon">📈</div>
+          <h3 class="card-title">Market Index</h3>
+          <div class="card-value">+3.2%</div>
+          <p class="card-subtitle">Weekly Growth</p>
+        </div>
+        <div class="dashboard-card stable">
+          <div class="card-icon">⚖️</div>
+          <h3 class="card-title">Price Stability</h3>
+          <div class="card-value">Moderate</div>
+          <p class="card-subtitle">Current Status</p>
+        </div>
+        <div class="dashboard-card trending-up">
+          <div class="card-icon">🔮</div>
+          <h3 class="card-title">Demand Outlook</h3>
+          <div class="card-value">Strong</div>
+          <p class="card-subtitle">Next Quarter</p>
+        </div>
+        <div class="dashboard-card neutral">
+          <div class="card-icon">🌾</div>
+          <h3 class="card-title">Active Markets</h3>
+          <div class="card-value">247</div>
+          <p class="card-subtitle">Tracked Daily</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="market-main">
+    <!-- Price Table Section -->
+    <section class="card price-table-section">
+      <div class="section-header">
+        <h2 class="section-heading">Live Market Prices</h2>
+        <div class="table-controls">
+          <select class="filter-select">
+            <option value="all">All Crops</option>
+            <option value="cereals">Cereals</option>
+            <option value="pulses">Pulses</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="fruits">Fruits</option>
+          </select>
+          <select class="filter-select">
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="price-table-wrapper">
+        <div class="price-table">
+          <div class="table-header">
+            <span class="col-crop">Commodity</span>
+            <span class="col-price">Current Price</span>
+            <span class="col-change">24h Change</span>
+            <span class="col-volume">Volume Traded</span>
+            <span class="col-action">Action</span>
+          </div>
+
+          <div class="table-body">
+            <div class="price-row">
+              <div class="crop-cell">
+                <span class="crop-icon">🌾</span>
+                <div class="crop-info">
+                  <span class="crop-name">Rice (Basmati)</span>
+                  <span class="crop-variety">Premium Grade</span>
+                </div>
+              </div>
+              <span class="price-cell">₹2,850/quintal</span>
+              <span class="change-cell positive">+5.2% ↗</span>
+              <span class="volume-cell">1,240 tons</span>
+              <button class="action-btn">View Details</button>
+            </div>
+
+            <div class="price-row">
+              <div class="crop-cell">
+                <span class="crop-icon">🌽</span>
+                <div class="crop-info">
+                  <span class="crop-name">Maize (Hybrid)</span>
+                  <span class="crop-variety">Yellow Corn</span>
+                </div>
+              </div>
+              <span class="price-cell">₹1,950/quintal</span>
+              <span class="change-cell negative">-2.1% ↘</span>
+              <span class="volume-cell">980 tons</span>
+              <button class="action-btn">View Details</button>
+            </div>
+
+            <div class="price-row">
+              <div class="crop-cell">
+                <span class="crop-icon">🥬</span>
+                <div class="crop-info">
+                  <span class="crop-name">Wheat (Durum)</span>
+                  <span class="crop-variety">Hard Wheat</span>
+                </div>
+              </div>
+              <span class="price-cell">₹2,250/quintal</span>
+              <span class="change-cell positive">+1.8% ↗</span>
+              <span class="volume-cell">1,580 tons</span>
+              <button class="action-btn">View Details</button>
+            </div>
+
+            <div class="price-row">
+              <div class="crop-cell">
+                <span class="crop-icon">🍅</span>
+                <div class="crop-info">
+                  <span class="crop-name">Tomato</span>
+                  <span class="crop-variety">Fresh Grade A</span>
+                </div>
+              </div>
+              <span class="price-cell">₹4,200/quintal</span>
+              <span class="change-cell positive">+12.5% ↗</span>
+              <span class="volume-cell">650 tons</span>
+              <button class="action-btn">View Details</button>
+            </div>
+
+            <div class="price-row">
+              <div class="crop-cell">
+                <span class="crop-icon">🥔</span>
+                <div class="crop-info">
+                  <span class="crop-name">Potato</span>
+                  <span class="crop-variety">Fresh Medium</span>
+                </div>
+              </div>
+              <span class="price-cell">₹1,850/quintal</span>
+              <span class="change-cell negative">-0.5% ↘</span>
+              <span class="volume-cell">2,100 tons</span>
+              <button class="action-btn">View Details</button>
+            </div>
+
+            <div class="price-row">
+              <div class="crop-cell">
+                <span class="crop-icon">🌶️</span>
+                <div class="crop-info">
+                  <span class="crop-name">Chili (Red)</span>
+                  <span class="crop-variety">Dried Spice</span>
+                </div>
+              </div>
+              <span class="price-cell">₹8,500/quintal</span>
+              <span class="change-cell positive">+7.3% ↗</span>
+              <span class="volume-cell">320 tons</span>
+              <button class="action-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Chart Section -->
+    <section class="card chart-section">
+      <div class="section-header">
+        <h2 class="section-heading">Price Trend Analysis</h2>
+        <div class="chart-controls">
+          <select class="chart-select">
+            <option value="rice">Rice (Basmati)</option>
+            <option value="wheat">Wheat (Durum)</option>
+            <option value="maize">Maize (Hybrid)</option>
+            <option value="tomato">Tomato</option>
+          </select>
+          <div class="time-selector">
+            <button class="time-btn active">7D</button>
+            <button class="time-btn">1M</button>
+            <button class="time-btn">3M</button>
+            <button class="time-btn">1Y</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-header">
+          <h3 class="chart-title">Rice Price Movement - Last 7 Days</h3>
+          <div class="chart-stats">
+            <span class="stat-item">High: ₹2,890</span>
+            <span class="stat-item">Low: ₹2,710</span>
+            <span class="stat-item">Avg: ₹2,820</span>
+          </div>
+        </div>
+        <div class="chart-visual">
+          <div class="price-chart">
+            <div class="chart-grid">
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+            </div>
+            <div class="chart-bars">
+              <div class="price-bar" style="height: 65%;" data-value="2710"></div>
+              <div class="price-bar" style="height: 72%;" data-value="2750"></div>
+              <div class="price-bar" style="height: 68%;" data-value="2730"></div>
+              <div class="price-bar" style="height: 85%;" data-value="2820"></div>
+              <div class="price-bar" style="height: 80%;" data-value="2790"></div>
+              <div class="price-bar" style="height: 90%;" data-value="2850"></div>
+              <div class="price-bar active" style="height: 95%;" data-value="2890"></div>
+            </div>
+            <div class="chart-labels">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+              <span>Sun</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Market Insights Section -->
+  <section class="insights-section">
+    <div class="insights-container">
+      <h2 class="section-title">Market Intelligence & Insights</h2>
+
+      <div class="insights-grid">
+        <div class="insight-card hot">
+          <div class="insight-badge">🔥 Hot Trend</div>
+          <h3 class="insight-title">Tomato Prices Surge 15%</h3>
+          <p class="insight-content">Unexpected rainfall in major tomato-producing regions has reduced supply, driving prices up significantly. This trend is expected to continue for 2-3 weeks.</p>
+          <div class="insight-meta">
+            <span class="insight-source">Market Analysis Team</span>
+            <span class="insight-time">2 hours ago</span>
+          </div>
+        </div>
+
+        <div class="insight-card positive">
+          <div class="insight-badge">✅ Opportunity</div>
+          <h3 class="insight-title">Rice Harvest Season Opens</h3>
+          <p class="insight-content">Major rice-producing states have begun harvest season. Early reports suggest good yield quality, which may stabilize prices in the coming weeks.</p>
+          <div class="insight-meta">
+            <span class="insight-source">Field Reports</span>
+            <span class="insight-time">6 hours ago</span>
+          </div>
+        </div>
+
+        <div class="insight-card neutral">
+          <div class="insight-badge">📊 Analysis</div>
+          <h3 class="insight-title">Supply Chain Improvements</h3>
+          <p class="insight-content">New transportation infrastructure in rural areas is reducing logistics costs by 8-12%, potentially improving farmer margins across multiple crops.</p>
+          <div class="insight-meta">
+            <span class="insight-source">Infrastructure Report</span>
+            <span class="insight-time">1 day ago</span>
+          </div>
+        </div>
+
+        <div class="insight-card warning">
+          <div class="insight-badge">⚠️ Alert</div>
+          <h3 class="insight-title">Weather Pattern Changes</h3>
+          <p class="insight-content">Meteorological department predicts delayed monsoon in some regions. Farmers should consider drought-resistant crop varieties for the upcoming season.</p>
+          <div class="insight-meta">
+            <span class="insight-source">Weather Dept</span>
+            <span class="insight-time">1 day ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Export Tools Section -->
+  <section class="tools-section">
+    <div class="tools-container">
+      <h2 class="section-title">Market Data Tools</h2>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon">📊</div>
+          <h3 class="tool-title">Price History Export</h3>
+          <p class="tool-desc">Download historical price data for analysis</p>
+          <button class="tool-btn">Download CSV</button>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📈</div>
+          <h3 class="tool-title">Market Report</h3>
+          <p class="tool-desc">Get weekly comprehensive market analysis</p>
+          <button class="tool-btn">Generate Report</button>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🔔</div>
+          <h3 class="tool-title">Price Alerts</h3>
+          <p class="tool-desc">Set up notifications for price changes</p>
+          <button class="tool-btn">Setup Alerts</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
