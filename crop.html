@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Recommendation - AgriSense</title>
+  <link rel="stylesheet" href="agri.css">
+  <link rel="stylesheet" href="crop.css">
+</head>
+<body>
+  <!-- Top Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">AgriSense</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="hover-green">Home</a>
+        <a href="crop.html" class="active-tab">Crop Recommendation</a>
+        <a href="plant-disease.html" class="hover-green">Disease Detection</a>
+        <a href="market.html" class="hover-green">Market Trends</a>
+        <a href="about.html" class="hover-green">About</a>
+      </div>
+      <div>
+        <button class="profile-btn">Profile</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="header-container">
+      <h1 class="page-title">AI-Powered Crop Recommendations</h1>
+      <p class="page-subtitle">Get personalized crop suggestions based on your farm's unique conditions and market opportunities</p>
+    </div>
+  </section>
+
+  <!-- Main Content Grid -->
+  <main class="crop-main">
+    <!-- Input Form Section -->
+    <section class="card input-form-card">
+      <h2 class="section-heading">Farm Information</h2>
+
+      <!-- Location and Size -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="location">Farm Location</label>
+          <input type="text" id="location" class="text-input" placeholder="Enter city, state or coordinates">
+        </div>
+        <div class="form-group">
+          <label for="farm-size">Farm Size (acres)</label>
+          <input type="number" id="farm-size" class="text-input" placeholder="e.g., 10" min="0.1" step="0.1">
+        </div>
+      </div>
+
+      <!-- Soil Information -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="soil-type">Soil Type</label>
+          <select id="soil-type" class="select-input">
+            <option value="">Select soil type</option>
+            <option value="clay">Clay Soil</option>
+            <option value="sandy">Sandy Soil</option>
+            <option value="loamy">Loamy Soil</option>
+            <option value="silt">Silt Soil</option>
+            <option value="peaty">Peaty Soil</option>
+            <option value="chalky">Chalky Soil</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ph-level">Soil pH Level</label>
+          <input type="number" id="ph-level" class="text-input" min="0" max="14" step="0.1" placeholder="6.0 - 7.5">
+        </div>
+      </div>
+
+      <!-- Climate Conditions -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rainfall">Average Annual Rainfall (mm)</label>
+          <input type="number" id="rainfall" class="text-input" placeholder="e.g., 800" min="0">
+        </div>
+        <div class="form-group">
+          <label for="temperature">Average Temperature (°C)</label>
+          <input type="number" id="temperature" class="text-input" placeholder="e.g., 25" step="0.1">
+        </div>
+      </div>
+
+      <!-- Season and Water -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="season">Planting Season</label>
+          <select id="season" class="select-input">
+            <option value="">Select planting season</option>
+            <option value="kharif">Kharif (June - November)</option>
+            <option value="rabi">Rabi (November - April)</option>
+            <option value="zaid">Zaid (April - June)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="irrigation">Irrigation Availability</label>
+          <select id="irrigation" class="select-input">
+            <option value="">Select irrigation type</option>
+            <option value="rainfed">Rainfed Only</option>
+            <option value="basic">Basic Irrigation</option>
+            <option value="advanced">Advanced Irrigation</option>
+            <option value="drip">Drip Irrigation</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Budget -->
+      <div class="form-group">
+        <label for="budget">Investment Budget (₹)</label>
+        <input type="number" id="budget" class="text-input" placeholder="e.g., 50000" min="1000">
+      </div>
+
+      <button class="recommend-btn">Get Crop Recommendations</button>
+    </section>
+
+    <!-- Results Section -->
+    <section class="card results-card">
+      <h2 class="section-heading">Recommended Crops</h2>
+
+      <div class="recommendations-grid">
+        <!-- Recommendation 1 -->
+        <div class="recommendation-card best-match">
+          <div class="match-badge">Best Match</div>
+          <div class="crop-visual">🌾</div>
+          <h3 class="crop-name">Rice (Basmati)</h3>
+          <div class="match-score">94% Match</div>
+
+          <div class="crop-details">
+            <div class="detail-item">
+              <span class="detail-label">Suitability:</span>
+              <span class="detail-value">Excellent for clay soil, high rainfall</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Season:</span>
+              <span class="detail-value">Kharif (Monsoon)</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Expected Yield:</span>
+              <span class="detail-value">4.5-6 tons/hectare</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Market Price:</span>
+              <span class="detail-value">₹2,850/quintal</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Profit Margin:</span>
+              <span class="detail-value profit-positive">High (40-45%)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendation 2 -->
+        <div class="recommendation-card">
+          <div class="crop-visual">🌽</div>
+          <h3 class="crop-name">Maize (Hybrid)</h3>
+          <div class="match-score">87% Match</div>
+
+          <div class="crop-details">
+            <div class="detail-item">
+              <span class="detail-label">Suitability:</span>
+              <span class="detail-value">Good for well-drained soil</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Season:</span>
+              <span class="detail-value">Kharif/Rabi</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Expected Yield:</span>
+              <span class="detail-value">3-5 tons/hectare</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Market Price:</span>
+              <span class="detail-value">₹1,950/quintal</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Profit Margin:</span>
+              <span class="detail-value profit-moderate">Moderate (30-35%)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendation 3 -->
+        <div class="recommendation-card">
+          <div class="crop-visual">🥬</div>
+          <h3 class="crop-name">Wheat (Durum)</h3>
+          <div class="match-score">79% Match</div>
+
+          <div class="crop-details">
+            <div class="detail-item">
+              <span class="detail-label">Suitability:</span>
+              <span class="detail-value">Suitable for moderate rainfall</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Season:</span>
+              <span class="detail-value">Rabi (Winter)</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Expected Yield:</span>
+              <span class="detail-value">2.5-4 tons/hectare</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Market Price:</span>
+              <span class="detail-value">₹2,250/quintal</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Profit Margin:</span>
+              <span class="detail-value profit-moderate">Moderate (25-30%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analysis-note">
+        <p><strong>Analysis:</strong> Based on your farm conditions, rice shows the highest compatibility. Consider crop rotation with pulses for soil health improvement.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Additional Information Section -->
+  <section class="info-section">
+    <div class="info-container">
+      <h2 class="section-title">Our Recommendation Process</h2>
+      <div class="process-factors">
+        <div class="factor-card">
+          <div class="factor-icon">🌡️</div>
+          <h3 class="factor-title">Climate Analysis</h3>
+          <p class="factor-desc">We analyze temperature patterns, rainfall data, and seasonal variations to match crops with optimal growing conditions.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🏔️</div>
+          <h3 class="factor-title">Soil Assessment</h3>
+          <p class="factor-desc">Soil type, pH levels, nutrient availability, and drainage conditions are evaluated for crop compatibility.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">💰</div>
+          <h3 class="factor-title">Market Intelligence</h3>
+          <p class="factor-desc">Current market prices, demand trends, and profit projections are incorporated for financial viability.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🔄</div>
+          <h3 class="factor-title">Sustainability</h3>
+          <p class="factor-desc">Long-term soil health, water conservation, and sustainable farming practices are considered in recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
