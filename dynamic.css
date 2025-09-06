@@ -1,0 +1,227 @@
+/* Additional CSS for JavaScript-generated elements */
+
+/* Notification system */
+.notification {
+    transition: all 0.3s ease;
+    animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Loading states */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #16a34a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form error states */
+.error-message {
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Chart enhancements */
+.price-bar {
+    transition: all 0.3s ease;
+}
+
+.price-bar:hover {
+    filter: brightness(0.9);
+    transform: scaleY(1.02);
+}
+
+/* Floating Action Button */
+.floating-action-btn {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Recommendation cards */
+.recommendation-card {
+    transition: all 0.3s ease;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.best-match {
+    border: 2px solid #16a34a;
+    position: relative;
+}
+
+.match-badge {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    background: #16a34a;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Profit margin colors */
+.profit-very-high {
+    color: #059669;
+    font-weight: 600;
+}
+
+.profit-high {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.profit-moderate {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.profit-low {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* Price table enhancements */
+.price-row {
+    transition: background-color 0.2s ease;
+}
+
+.price-row:hover {
+    background: #f8fafc !important;
+}
+
+/* Team member interactions */
+.team-member {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+/* Input hints */
+.input-hint {
+    animation: fadeInUp 0.3s ease;
+}
+
+/* Character counter */
+.character-counter {
+    transition: color 0.3s ease;
+}
+
+/* Quick access menu */
+.quick-access-menu .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    margin-bottom: 0.25rem;
+}
+
+.quick-access-menu .menu-item:hover {
+    background: #f0fdf4;
+    color: #16a34a;
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+    }
+
+    .floating-action-btn {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .modal-content {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+        max-height: calc(100vh - 2rem);
+    }
+}
